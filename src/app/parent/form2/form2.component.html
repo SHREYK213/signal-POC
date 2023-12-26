@@ -1,0 +1,14 @@
+<h1>form2</h1>
+<form class="form2" [formGroup]="form2">
+
+    <mat-form-field>
+      <mat-label for="firstName">First Name: </mat-label>
+      <input matInput id="firstName" #firstNameField [value]="this.firstName()" (input)="this.firstName.set(firstNameField.value)" formControlName="firstName">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label for="last-name">Last Name: </mat-label>
+      <input matInput id="last-name" #lastNameField [value]="this.lastName()" (input)="this.lastName.set(lastNameField.value)" formControlName="lastName">
+    </mat-form-field>
+    <button color="primary" mat-raised-button type="submit" (click)="onSubmit()">Submit</button>
+  </form>
